@@ -12,7 +12,6 @@ The UPHSI Digital Campus Exploration website is designed as part of the **compli
 It combines:
 - A **360 Virtual Tour** (powered by [Marzipano](http://www.marzipano.net))  
 - Official **University content** (About, Academics, Admissions, Campus Life)  
-- A **modern promotional layout** using JONELTA colors (#003399 and #FFF100)  
 
 ---
 
