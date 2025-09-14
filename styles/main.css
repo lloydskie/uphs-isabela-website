@@ -1,0 +1,218 @@
+#mobile-menu nav {
+/* Highlight active nav and hamburger menu links */
+.nav-link.active,
+.hamburger-link.active {
+  color: var(--color-jonelta-yellow) !important;
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-jonelta-yellow);
+}
+  width: 100%;
+}
+.hamburger-link {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--color-jonelta-blue);
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+  font-size: 1.1rem;
+  text-align: left;
+}
+.hamburger-link:hover {
+  background: var(--color-jonelta-blue);
+  color: #fff;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-jonelta-blue: #003399;
+  --color-jonelta-yellow: #fff100;
+}
+body {
+  background: #fff;
+  color: #222;
+  overscroll-behavior: none;
+}
+
+html {
+  overscroll-behavior: none;
+}
+.text-jonelta-blue {
+  color: var(--color-jonelta-blue);
+}
+.bg-jonelta-blue {
+  background-color: var(--color-jonelta-blue);
+  color: #fff;
+}
+.text-jonelta-yellow {
+  color: var(--color-jonelta-yellow);
+}
+.bg-jonelta-yellow {
+  background-color: var(--color-jonelta-yellow);
+  color: #222;
+}
+/* Remove neon effects from text and buttons */
+.neon-text {
+  color: var(--color-jonelta-blue);
+}
+.neon-btn {
+  /* No neon effect, just shadow */
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.12);
+}
+
+/* Hamburger menu background white, shadow on hover */
+#header-logo-title {
+  /* Default desktop size */
+  height: 5rem;
+}
+
+#header-logo-title .logo-img {
+  height: 5rem;
+}
+#header-logo-title .title-main {
+  font-size: 1.1rem;
+}
+#header-logo-title .title-sub {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  #header-logo-title {
+    height: 3.2rem;
+  }
+  #header-logo-title .logo-img {
+    height: 3.2rem;
+  }
+  #header-logo-title .title-main {
+    font-size: 0.8rem;
+  }
+  #header-logo-title .title-sub {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #header-logo-title {
+    height: 2.2rem;
+  }
+  #header-logo-title .logo-img {
+    height: 2.2rem;
+  }
+  #header-logo-title .title-main {
+    font-size: 0.6rem;
+  }
+  #header-logo-title .title-sub {
+    font-size: 0.45rem;
+  }
+}
+#mobile-menu {
+  background: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+  color: var(--color-jonelta-blue);
+}
+
+#mobile-menu a {
+  transition: color 0.3s;
+}
+#mobile-menu a:hover {
+  color: var(--color-jonelta-yellow);
+}
+
+nav a, #mobile-menu a, .menu-link {
+  transition: color 0.3s;
+}
+nav a:hover, #mobile-menu a:hover, .menu-link:hover {
+  color: var(--color-jonelta-yellow);
+}
+
+
+.neon-btn, .main-btn {
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.neon-btn:hover, .main-btn:hover {
+  color: #fff100;
+  text-shadow: 0 0 8px #fff100, 0 0 16px #fff100;
+}
+
+/* Remove box-shadow on hover for buttons/links */
+a, button, .neon-btn, .main-btn {
+  box-shadow: none !important;
+}
+/* Neon Preloader */
+#preloader {
+  background: rgba(255,255,255,0.95);
+}
+.preloader-spinner {
+  border: 6px solid #003399;
+  border-top: 6px solid #fff100;
+  box-shadow: 0 0 30px #00f, 0 0 60px #fff100;
+}
+/* Neon Cursor */
+body {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="8" fill="%2300f" stroke="%23fff100" stroke-width="3"/></svg>') 16 16, pointer;
+}
+a, button, .neon-btn {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="8" fill="%23fff100" stroke="%2300f" stroke-width="3"/></svg>') 16 16, pointer;
+}
+/* Glassmorphism Hover for Interactive Elements */
+a, button, .neon-btn {
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+a:hover, button:hover, .neon-btn:hover {
+  background: rgba(0,51,153,0.08);
+  box-shadow: 0 4px 32px 0 rgba(0,255,255,0.15), 0 0 10px #fff100, 0 0 20px #003399;
+  backdrop-filter: blur(4px) brightness(1.05);
+  border-radius: 12px;
+  color: var(--color-jonelta-blue);
+}
+/* Neon Preloader */
+#preloader {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.7s ease;
+}
+#preloader.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.preloader-spinner {
+  width: 64px;
+  height: 64px;
+  border: 6px solid #003399;
+  border-top: 6px solid #fff100;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 30px #00f, 0 0 60px #fff100;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Neon Cursor */
+body {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="8" fill="%2300f" stroke="%23fff100" stroke-width="3"/></svg>') 16 16, pointer;
+}
+a, button, .neon-btn {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="8" fill="%23fff100" stroke="%2300f" stroke-width="3"/></svg>') 16 16, pointer;
+}
+
+/* Glassmorphism Hover for Interactive Elements */
+a, button, .neon-btn {
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+a:hover, button:hover, .neon-btn:hover {
+  background: rgba(0,51,153,0.25);
+  box-shadow: 0 4px 32px 0 rgba(0,255,255,0.3), 0 0 10px #fff100, 0 0 20px #003399;
+  backdrop-filter: blur(8px) brightness(1.2);
+  border-radius: 12px;
+  color: var(--color-jonelta-yellow);
+}

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UPHSL-IC Digital Campus v2</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link href="https://fonts.cdnfonts.com/css/cloister-black" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/26e3241919.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-black text-white font-sans tracking-wide">
+  <body class="bg-white text-jonelta-blue font-sans tracking-wide">
+  <!-- Neon Preloader -->
+    <div id="preloader">
+      <div class="preloader-spinner"></div>
+    </div>
+    <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md text-jonelta-blue z-50 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+  <div id="header-logo-title" class="flex items-center">
+    <a href="index.html" style="display:flex;align-items:center;text-decoration:none;color:inherit;">
+      <img src="/assets/logo.png" alt="UPHSL-IC Logo" class="logo-img w-auto mr-2">
+      <div class="flex flex-col justify-center text-left" style="line-height:1;">
+        <span class="title-main" style="font-family: 'Cloister Black', serif; display:block;">University of Perpetual Help System</span>
+        <span class="title-main" style="font-family: 'Cloister Black', serif; display:block;">Laguna - Isabela Campus</span>
+        <span class="title-sub" style="font-family: inherit; display:block;">Cauayan City, Isabela</span>
+      </div>
+    </a>
+  </div>
+        <!-- NAV MENU -->
+  <nav class="hidden lg:flex gap-6">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="../pages/about.html" class="nav-link">About</a>
+          <a href="../pages/academics.html" class="nav-link">Academics</a>
+          <a href="../pages/admissions.html" class="nav-link">Admissions</a>
+          <a href="../pages/campus-life.html" class="nav-link">Campus Life</a>
+          <a href="../pages/updates.html" class="nav-link">Updates</a>
+          <a href="../pages/contact.html" class="nav-link">Contact</a>
+        </nav>
+        <!-- HAMBURGER MENU -->
+  <button id="menu-btn" class="lg:hidden text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="hidden flex-col bg-black/90 p-4 lg:hidden">
+  <nav class="flex flex-col gap-2">
+  <a href="index.html" class="hamburger-link active">Home</a>
+  <a href="../pages/about.html" class="hamburger-link">About</a>
+  <a href="../pages/academics.html" class="hamburger-link">Academics</a>
+  <a href="../pages/admissions.html" class="hamburger-link">Admissions</a>
+  <a href="../pages/campus-life.html" class="hamburger-link">Campus Life</a>
+  <a href="../pages/updates.html" class="hamburger-link">Updates</a>
+  <a href="../pages/contact.html" class="hamburger-link">Contact</a>
+  </nav>
+      </div>
+    </header>
+    <!-- HERO -->
+    <section class="h-screen w-full flex flex-col justify-center items-center text-center relative overflow-hidden">
+      <!-- YouTube Video Background -->
+      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none select-none">
+        <iframe
+          src="https://www.youtube.com/embed/V1hLKMAiGvs?autoplay=1&mute=1&controls=0&loop=1&playlist=V1hLKMAiGvs&modestbranding=1&showinfo=0&rel=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          style="width:100vw;height:100vh;object-fit:cover;position:absolute;top:0;left:0;pointer-events:none;z-index:0;"
+          tabindex="-1"
+        ></iframe>
+    <div class="absolute inset-0" style="backdrop-filter: blur(3px);"></div>
+      </div>
+      <div class="relative z-10 w-full flex flex-col justify-center items-center">
+  <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-jonelta-blue mb-2" style="font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;">University of Perpetual Help System Laguna - Isabela Campus</h2>
+  <p class="text-lg md:text-2xl font-semibold text-jonelta-yellow mb-8" style="font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;">"Character Building is Nation Building"</p>
+  <div class="flex gap-4 justify-center">
+    <a href="../pages/admissions.html" class="px-6 py-3 bg-jonelta-yellow text-black font-bold rounded main-btn">Apply Now</a>
+    <button onclick="openHeroVirtualTour()" class="px-6 py-3 bg-jonelta-blue text-white font-bold rounded main-btn">Explore Virtual Tour</button>
+  </div>
+  <!-- Hero Virtual Tour Modal -->
+  <div id="hero-virtualtour-overlay" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl w-full p-0 relative flex flex-col">
+      <div class="flex justify-between items-center p-4 border-b">
+        <h2 class="text-xl font-bold text-jonelta-blue flex items-center"><i class="fas fa-vr-cardboard mr-2"></i>Virtual Campus Tour</h2>
+        <div>
+          <button onclick="fullscreenHeroVirtualTour()" class="bg-jonelta-blue text-white px-3 py-1 rounded shadow hover:bg-jonelta-yellow hover:text-black transition text-sm flex items-center mr-2"><i class="fas fa-expand mr-1"></i> Fullscreen</button>
+          <button onclick="closeHeroVirtualTour()" class="bg-red-600 text-white px-3 py-1 rounded shadow hover:bg-red-400 transition text-sm flex items-center"><i class="fas fa-times mr-1"></i> Close</button>
+        </div>
+      </div>
+      <iframe id="heroVirtualTourIframe" src="https://360-uphsl-isabela.pages.dev/app-files/" width="100%" height="500" style="border-radius:0 0 8px 8px;border:none;"></iframe>
+    </div>
+  </div>
+  <script>
+    const heroVirtualTourOverlay = document.getElementById('hero-virtualtour-overlay');
+    const heroVirtualTourIframe = document.getElementById('heroVirtualTourIframe');
+    function openHeroVirtualTour() {
+      heroVirtualTourOverlay.classList.remove('hidden');
+    }
+    function closeHeroVirtualTour() {
+      heroVirtualTourOverlay.classList.add('hidden');
+    }
+    function fullscreenHeroVirtualTour() {
+      if (heroVirtualTourIframe) {
+        if (heroVirtualTourIframe.requestFullscreen) {
+          heroVirtualTourIframe.requestFullscreen();
+        } else if (heroVirtualTourIframe.webkitRequestFullscreen) {
+          heroVirtualTourIframe.webkitRequestFullscreen();
+        } else if (heroVirtualTourIframe.mozRequestFullScreen) {
+          heroVirtualTourIframe.mozRequestFullScreen();
+        } else if (heroVirtualTourIframe.msRequestFullscreen) {
+          heroVirtualTourIframe.msRequestFullscreen();
+        }
+      }
+    }
+    window.addEventListener('keydown', function(e) {
+      if (!heroVirtualTourOverlay.classList.contains('hidden') && e.key === 'Escape') closeHeroVirtualTour();
+    });
+    heroVirtualTourOverlay.addEventListener('click', function(e) {
+      if (e.target === heroVirtualTourOverlay) closeHeroVirtualTour();
+    });
+  </script>
+      </div>
+    </section>
+    <!-- QUICK HIGHLIGHTS -->
+  <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 text-center">
+        <div class="p-6 border border-jonelta-blue rounded hover:shadow-[0_0_15px_rgba(0,51,153,0.9)] transition cursor-pointer" onclick="openModal('academics')">
+          <i class="fas fa-graduation-cap text-4xl text-jonelta-yellow"></i>
+          <h3 class="mt-4 text-lg font-bold">Academics</h3>
+        </div>
+        <div class="p-6 border border-jonelta-blue rounded hover:shadow-[0_0_15px_rgba(0,51,153,0.9)] transition cursor-pointer" onclick="openModal('admissions')">
+          <i class="fas fa-user-edit text-4xl text-jonelta-yellow"></i>
+          <h3 class="mt-4 text-lg font-bold">Admissions</h3>
+        </div>
+        <div class="p-6 border border-jonelta-blue rounded hover:shadow-[0_0_15px_rgba(0,51,153,0.9)] transition cursor-pointer" onclick="openModal('virtualtour')">
+          <i class="fas fa-vr-cardboard text-4xl text-jonelta-yellow"></i>
+          <h3 class="mt-4 text-lg font-bold">Virtual Tour</h3>
+        </div>
+        <div class="p-6 border border-jonelta-blue rounded hover:shadow-[0_0_15px_rgba(0,51,153,0.9)] transition cursor-pointer" onclick="openModal('studentlife')">
+          <i class="fas fa-users text-4xl text-jonelta-yellow"></i>
+          <h3 class="mt-4 text-lg font-bold">Student Life</h3>
+        </div>
+      </div>
+      <!-- Modals -->
+      <div id="modal-overlay" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center">
+        <div id="modal-box" class="bg-white rounded-lg shadow-lg max-w-lg w-full p-8 relative">
+          <button onclick="closeModal()" class="absolute top-2 right-2 text-jonelta-blue text-2xl font-bold">&times;</button>
+          <div id="modal-content"></div>
+        </div>
+      </div>
+      <script>
+        const modalOverlay = document.getElementById('modal-overlay');
+        const modalContent = document.getElementById('modal-content');
+        let virtualTourIframe = null;
+        function openModal(type) {
+          let html = '';
+          if (type === 'academics') {
+            html = `<h2 class='text-2xl font-bold mb-4 text-jonelta-blue'><i class='fas fa-graduation-cap mr-2'></i>Academics</h2>
+              <ul class='text-left space-y-2'>
+                <li><i class='fas fa-laptop-code text-jonelta-blue mr-2'></i><a href='../pages/academics.html#cite' class='text-jonelta-blue hover:underline'>College of Information Technology and Engineering</a></li>
+                <li><i class='fas fa-chart-line text-jonelta-blue mr-2'></i><a href='../pages/academics.html#cba' class='text-jonelta-blue hover:underline'>College of Business and Accountancy</a></li>
+                <li><i class='fas fa-book text-jonelta-blue mr-2'></i><a href='../pages/academics.html#cae' class='text-jonelta-blue hover:underline'>College of Arts and Education</a></li>
+                <li><i class='fas fa-hotel text-jonelta-blue mr-2'></i><a href='../pages/academics.html#cihm' class='text-jonelta-blue hover:underline'>College of International Hospitality Management</a></li>
+                <li><i class='fas fa-user-nurse text-jonelta-blue mr-2'></i><a href='../pages/academics.html#cahs' class='text-jonelta-blue hover:underline'>College of Allied Health Sciences</a></li>
+                <li><i class='fas fa-tools text-jonelta-blue mr-2'></i><a href='../pages/academics.html#tesda' class='text-jonelta-blue hover:underline'>TESDA</a></li>
+                <li><i class='fas fa-school text-jonelta-blue mr-2'></i><a href='../pages/academics.html#basiced' class='text-jonelta-blue hover:underline'>Basic Education Department</a></li>
+              </ul>`;
+          } else if (type === 'admissions') {
+            html = `<h2 class='text-2xl font-bold mb-4 text-jonelta-blue'><i class='fas fa-user-edit mr-2'></i>Admissions</h2>
+              <ul class='text-left space-y-2'>
+                <li><i class='fas fa-file-alt text-jonelta-blue mr-2'></i><a href='../pages/admissions.html#requirements' class='text-jonelta-blue hover:underline'>Requirements</a></li>
+                <li><i class='fas fa-clipboard-check text-jonelta-blue mr-2'></i><a href='../pages/admissions.html#enrollment' class='text-jonelta-blue hover:underline'>Enrollment Procedures</a></li>
+                <li><i class='fas fa-question-circle text-jonelta-blue mr-2'></i><a href='../pages/admissions.html#why-uphsi' class='text-jonelta-blue hover:underline'>Why UPHSI?</a></li>
+              </ul>`;
+          } else if (type === 'virtualtour') {
+            html = `<h2 class='text-2xl font-bold mb-4 text-jonelta-blue'><i class='fas fa-vr-cardboard mr-2'></i>Virtual Tour</h2>
+              <div class='mb-4'><i class='fas fa-map-marked-alt text-jonelta-blue mr-2'></i>Virtual Campus Tour (3D Map Integration)</div>
+              <div class='relative'>
+                <iframe id='virtualTourIframe' src='https://360-uphsl-isabela.pages.dev/app-files/' width='100%' height='300' style='border-radius:8px;border:none;'></iframe>
+                <button onclick='fullscreenVirtualTour()' class='absolute top-2 right-2 bg-jonelta-blue text-white px-3 py-1 rounded shadow hover:bg-jonelta-yellow hover:text-black transition text-sm flex items-center'><i class="fas fa-expand mr-1"></i> Fullscreen</button>
+              </div>`;
+          } else if (type === 'studentlife') {
+            html = `<h2 class='text-2xl font-bold mb-4 text-jonelta-blue'><i class='fas fa-users mr-2'></i>Student Life</h2>
+              <ul class='text-left space-y-2'>
+                <li><i class='fas fa-user-friends text-jonelta-blue mr-2'></i><a href='../pages/campus-life.html#organizations' class='text-jonelta-blue hover:underline'>Student Organizations</a></li>
+                <li><i class='fas fa-building text-jonelta-blue mr-2'></i><a href='../pages/campus-life.html#facilities' class='text-jonelta-blue hover:underline'>Facilities</a></li>
+                <li><i class='fas fa-calendar-alt text-jonelta-blue mr-2'></i><a href='../pages/campus-life.html#activities' class='text-jonelta-blue hover:underline'>Activities & Events</a></li>
+              </ul>`;
+          }
+          modalContent.innerHTML = html;
+          modalOverlay.classList.remove('hidden');
+          if (type === 'virtualtour') {
+            virtualTourIframe = document.getElementById('virtualTourIframe');
+          } else {
+            virtualTourIframe = null;
+          }
+        }
+        function closeModal() {
+          modalOverlay.classList.add('hidden');
+          modalContent.innerHTML = '';
+          virtualTourIframe = null;
+        }
+        function fullscreenVirtualTour() {
+          if (virtualTourIframe) {
+            if (virtualTourIframe.requestFullscreen) {
+              virtualTourIframe.requestFullscreen();
+            } else if (virtualTourIframe.webkitRequestFullscreen) {
+              virtualTourIframe.webkitRequestFullscreen();
+            } else if (virtualTourIframe.mozRequestFullScreen) {
+              virtualTourIframe.mozRequestFullScreen();
+            } else if (virtualTourIframe.msRequestFullscreen) {
+              virtualTourIframe.msRequestFullscreen();
+            }
+          }
+        }
+        window.addEventListener('keydown', function(e) {
+          if (!modalOverlay.classList.contains('hidden') && e.key === 'Escape') closeModal();
+        });
+        modalOverlay.addEventListener('click', function(e) {
+          if (e.target === modalOverlay) closeModal();
+        });
+      </script>
+    </section>
+    <!-- FOOTER -->
+  <footer class="bg-white border-t border-gray-200 text-jonelta-blue py-8 mt-10">
+      <div class="max-w-6xl mx-auto text-center">
+  <p class="mb-4">© 2025 University of Perpetual Help System Laguna - Isabela Campus</p>
+        <div class="flex justify-center gap-6 text-xl">
+          <a href="#"><i class="fab fa-facebook hover:text-jonelta-yellow"></i></a>
+          <a href="#"><i class="fab fa-instagram hover:text-jonelta-yellow"></i></a>
+          <a href="#"><i class="fab fa-youtube hover:text-jonelta-yellow"></i></a>
+        </div>
+        <div class="flex justify-center gap-6 text-xl mb-6">
+        <img src="/assets/seals/dpo_seal_2026.png" alt="DPO Seal" class="h-10" title="DPO Seal">
+        <img src="/assets/seals/ISO_Logo.png" alt="ISO" class="h-10" title="ISO Certification">
+        <img src="/assets/seals/QS-Stars.png" alt="QS Stars" class="h-10" title="QS Stars">
+        <img src="/assets/seals/WURI-768x384.png" alt="WURI" class="h-10" title="WURI Ranking">
+        <img src="/assets/seals/AppliedHE-Certificate.png" alt="Applied HE Cert" class="h-10" title="Applied HE Certification">
+      </div>
+      </div>
+    </footer>
+    <script src="/scripts/main.js"></script>
+    <script>
+      window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+          preloader.classList.add('hide');
+          setTimeout(() => preloader.style.display = 'none', 800);
+        }
+      });
+    </script>
+    <script src="/scripts/main.js"></script>
+  </body>
+</html>
