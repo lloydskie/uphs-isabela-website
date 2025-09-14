@@ -69,3 +69,8 @@ University of Perpetual Help System Isabela Website (v2)
     ├── Address + Google Maps
     ├── Contact Information (Phone, Email)
     └── Social Media Links
+```
+##📜 License
+
+This project is developed for academic purposes and is part of the UPHSI thesis project.
+Further use, reproduction, or distribution requires permission from the project developers.
