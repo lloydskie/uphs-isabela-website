@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-university-entrance">
+        <li class="text">University Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-sidewalk-1">
+        <li class="text">Sidewalk 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-field-1">
+        <li class="text">Field 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-field-2">
+        <li class="text">Field 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-driveway-1">
+        <li class="text">Driveway 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-sidewalk-2">
+        <li class="text">Sidewalk 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-parking-driveway-1">
+        <li class="text">Parking Driveway 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-parking-driveway-2">
+        <li class="text">Parking Driveway 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-parking-driveway-3">
+        <li class="text">Parking Driveway 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-driveway-2">
+        <li class="text">Driveway 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-university-court">
+        <li class="text">University Court</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-driveway-3">
+        <li class="text">Driveway 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-parking-driveway-4">
+        <li class="text">Parking Driveway 4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-parking-lot">
+        <li class="text">Parking Lot</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-main-building-entrance">
+        <li class="text">Main Building Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-main-hallway-2nd-floor">
+        <li class="text">Main Hallway 2nd Floor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-hallway-2nd-floor">
+        <li class="text">Hallway 2nd Floor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-room-202">
+        <li class="text">Room 202</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-hallway-gazette-1">
+        <li class="text">Hallway Gazette 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-hallway-gazette-2">
+        <li class="text">Hallway Gazette 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20-hallway-physics-lab">
+        <li class="text">Hallway Physics Lab</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21-general-chemistry-lab">
+        <li class="text">General Chemistry Lab</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22-pharmacy-simulation-lab">
+        <li class="text">Pharmacy Simulation Lab</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23-hallway-its-and-comlab">
+        <li class="text">Hallway ITS and ComLab</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="24-hallway-comlab">
+        <li class="text">Hallway ComLab</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="25-room-comlab-1">
+        <li class="text">Room ComLab 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="26-room-comlab-2">
+        <li class="text">Room ComLab 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="27-main-front-hallway">
+        <li class="text">Main Front Hallway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="28-hallway-maintenance-east-wing">
+        <li class="text">Hallway Maintenance East Wing</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="29-hallway-1st-floor-east-wing">
+        <li class="text">Hallway 1st Floor East Wing</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="30-hallway-1st-floor-exit-east-wing">
+        <li class="text">Hallway 1st Floor Exit East Wing</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="31-basement-stairway">
+        <li class="text">Basement Stairway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="32-basement-lobby">
+        <li class="text">Basement Lobby</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="33-basement-exit-to-1st-floor-stairs-east-wing">
+        <li class="text">Basement Exit to 1st Floor Stairs East Wing</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="34-basement-emergency-exit-east-wing">
+        <li class="text">Basement Emergency Exit East Wing</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="35-1st-floor-to-2nd-floor-exit-stairs-east-wing">
+        <li class="text">1st Floor to 2nd Floor Exit Stairs East Wing</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="36-2nd-floor-exit-stairs-east-wing">
+        <li class="text">2nd Floor Exit Stairs East Wing</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="37-stairway-2nd-floor-east-wing">
+        <li class="text">Stairway 2nd Floor East Wing</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="38-hotel-entrance">
+        <li class="text">Hotel Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="39-hotel-lobby">
+        <li class="text">Hotel Lobby</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="40-cihm-corridor">
+        <li class="text">CIHM Corridor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="41-room-b">
+        <li class="text">Room B</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="42-room-h-and-medtech-faculty-entrance">
+        <li class="text">Room H and MedTech Faculty Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="43-room-h">
+        <li class="text">Room H</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="44-mezzanine-corridor-entrance">
+        <li class="text">Mezzanine Corridor Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="45-hr-and-nursing-faculty-corridor">
+        <li class="text">HR and Nursing Faculty Corridor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="46-accreditaton-and-bapa-corridor">
+        <li class="text">Accreditaton and BAPA Corridor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="47-hallway-tindalo">
+        <li class="text">Hallway Tindalo</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="48-brick-ground">
+        <li class="text">Brick ground</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="49-tindalo-corridor">
+        <li class="text">Tindalo Corridor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="50-room-106">
+        <li class="text">Room 106</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="51-tindalo-hall-entrance">
+        <li class="text">Tindalo Hall Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="52-tindalo-hall">
+        <li class="text">Tindalo Hall</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="53-preschool-basement-entrance">
+        <li class="text">Preschool Basement Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="54-preschool-basement-hallway">
+        <li class="text">Preschool Basement Hallway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="55-preschool-room">
+        <li class="text">Preschool Room</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="56-preschool-basement-exit">
+        <li class="text">Preschool Basement Exit</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="57-room-gr1-b7">
+        <li class="text">Room GR1 B7</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="58-stairway-2nd-floor">
+        <li class="text">Stairway 2nd Floor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="59-nursing-arts-laboratory-and-entrance-hall">
+        <li class="text">Nursing Arts Laboratory and Entrance Hall</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="60-2nd-floor-hallway">
+        <li class="text">2nd Floor Hallway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="61-library-entrance">
+        <li class="text">Library Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="62-elab-and-ssc-hallway">
+        <li class="text">ELab and SSC Hallway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="63-engineering-lab">
+        <li class="text">Engineering Lab</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="64-nursing-arts-laboratory-and-maintenance-hall">
+        <li class="text">Nursing Arts Laboratory and Maintenance Hall</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="65-main-building-exit">
+        <li class="text">Main Building Exit</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
