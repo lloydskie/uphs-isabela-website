@@ -16,16 +16,56 @@ It combines:
 
 ---
 
-## 📂 Project Structure
+## 🌳 Treemap (Markdown Illustration of Sitemap)
 
 ```bash
-uphsi-digital-campus-v2/
-│── public/                # Static assets (images, videos, documents)
-│── src/                   # Source code
-│   ├── components/        # Reusable UI components
-│   ├── pages/             # Main pages (Home, About, Academics, etc.)
-│   ├── styles/            # TailwindCSS / custom CSS
-│   └── virtual-tour/      # 360 Virtual Tour integration
-│── README.md              # Project documentation
-│── package.json           # Dependencies & scripts
-│── .gitignore             # Ignored files
+University of Perpetual Help System Isabela Website (v2)
+
+├── Home (Page)
+│   ├── Hero Banner (Campus image/video + CTA)
+│   ├── Quick Highlights (Programs | Admissions | Virtual Tour)
+│   └── Call to Action (Apply Now | Contact Us)
+
+├── About (Page)
+│   ├── History (Section)
+│   ├── Mission & Vision (Section)
+│   ├── School Seal (Section)
+│   ├── Perpetual Hymn (Section)
+│   ├── Administration (Section)
+│   └── Faculty and Staff (Section)
+
+├── Academics (Page)
+│   ├── College of Information Technology and Engineering
+│   ├── College of Business and Accountancy
+│   ├── College of Arts and Education
+│   ├── College of International Hospitality Management
+│   ├── College of Allied Health Sciences
+│   ├── TESDA Programs
+│   └── Basic Education Department
+
+├── Admissions (Page)
+│   ├── Requirements (Section)
+│   ├── Enrollment Procedures (Section)
+│   └── Why UPHSI? (Section)
+│       └── Scholarships & Financial Aid (optional)
+
+├── Campus Life (Page)
+│   ├── Student Organizations (DIGIPERPS, SSC, etc.)
+│   ├── Facilities (Library, Chapel, Dorms, Labs, Gym)
+│   ├── Activities & Events (Intramurals, Cultural, Outreach)
+│   └── Virtual Campus Tour (3D Map Integration)
+
+├── Research & Innovation (Page - optional)
+│   ├── Ongoing Projects
+│   ├── Publications
+│   └── Partnerships
+
+├── Updates / News & Events (Page)
+│   ├── Announcements
+│   ├── Calendar of Events
+│   └── Achievements
+
+└── Contact Us (Page)
+    ├── Address + Google Maps
+    ├── Contact Information (Phone, Email)
+    └── Social Media Links
