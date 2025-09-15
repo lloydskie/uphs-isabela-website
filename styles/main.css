@@ -1,3 +1,37 @@
+/* Prevent horizontal overflow and ensure responsive layout */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Responsive container for main content */
+.max-w-4xl, .max-w-7xl, .max-w-6xl {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Responsive iframe and images */
+iframe, img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix for sections with grid or flex layouts */
+.grid, .flex {
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* Prevent large tables from overflowing */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
 #mobile-menu nav {
 /* Highlight active nav and hamburger menu links */
 .nav-link.active,
