@@ -53,9 +53,118 @@
   </header>
   <main class="max-w-4xl mx-auto py-16">
     <h1 class="text-3xl font-bold neon-text mb-8">Contact Us</h1>
-    <section class="mb-8"><h2 class="text-xl font-bold">Address</h2><p>Placeholder for address & Google Maps.</p></section>
-    <section class="mb-8"><h2 class="text-xl font-bold">Contact Information</h2><p>Placeholder for phone & email.</p></section>
-    <section class="mb-8"><h2 class="text-xl font-bold">Social Media Links</h2><p>Placeholder for social links.</p></section>
+    <div class="space-y-6">
+      <!-- Address & Map -->
+      <div class="transition-all duration-500 bg-white rounded-lg shadow p-6 mb-8">
+        <button class="flex items-center gap-2 text-xl font-bold mb-4 focus:outline-none" onclick="toggleSection('address-section')">
+          <i class="fas fa-map-marker-alt text-jonelta-blue"></i> Address & Location
+          <i class="fas fa-chevron-down ml-2 transition-transform" id="chevron-address"></i>
+        </button>
+        <div id="address-section" class="max-h-96 overflow-hidden transition-all duration-500">
+          <div class="mb-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.587104510498!2d121.76035879999998!3d16.9138768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33855176e77bec7b%3A0x3f211f12fff5e92c!2sUniversity%20of%20Perpetual%20Help%20System%20Laguna%20Isabela%20Campus!5e1!3m2!1sen!2sph!4v1757935861394!5m2!1sen!2sph" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="mb-2"><strong>University of Perpetual Help System Laguna-Isabela Campus</strong></div>
+          <div class="mb-2">26 Asian Highway, Cauayan City, 3305 Isabela</div>
+          <div class="mb-2">WQ76+H4 Cauayan City, Isabela</div>
+          <div class="mb-2">Minante I, Cauayan City, Isabela</div>
+          <div class="mb-2">Cagayan Valley, Philippines</div>
+          <div class="mb-2">GPS Coordinates: <span class="font-mono">16.91378, 121.76038</span></div>
+          <div class="mb-2">Accessibility:</div>
+          <ul class="list-disc ml-6 mb-2">
+            <li class="inline-flex items-center"><i class="fas fa-wheelchair text-lg mr-1"></i> Wheelchair accessible entrance</li>
+            <li class="inline-flex items-center"><i class="fas fa-parking text-lg mr-1"></i> Wheelchair accessible parking lot</li>
+          </ul>
+          <div class="mb-2">Directions: <a href="https://www.waze.com/live-map/directions/ph/cagayan-valley/cauayan-city/university-of-perpetual-help-system-laguna-isabela-campus?to=place.ChIJe-x753ZRhTMRLOn1_xIfIT8&utm_source=chatgpt.com" target="_blank" class="text-jonelta-blue underline">Waze</a></div>
+        </div>
+      </div>
+      <!-- Contact Info -->
+      <div class="transition-all duration-500 bg-white rounded-lg shadow p-6 mb-8">
+        <button class="flex items-center gap-2 text-xl font-bold mb-4 focus:outline-none" onclick="toggleSection('contact-section')">
+          <i class="fas fa-phone-alt text-jonelta-blue"></i> Contact Information
+          <i class="fas fa-chevron-down ml-2 transition-transform" id="chevron-contact"></i>
+        </button>
+        <div id="contact-section" class="max-h-96 overflow-hidden transition-all duration-500">
+          <table class="w-full mb-4 text-left">
+            <thead><tr><th>Contact</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>Basic Education Phone</td><td><a href="tel:0782601237" class="text-jonelta-blue">(078) 260-1237</a></td></tr>
+              <tr><td>Basic Education Mobile</td><td><a href="tel:09954709199" class="text-jonelta-blue">0995-470-9199</a></td></tr>
+              <tr><td>College Phone</td><td><a href="tel:09209164755" class="text-jonelta-blue">0920-916-4755</a></td></tr>
+              <tr><td>College Mobile</td><td><a href="tel:09178555706" class="text-jonelta-blue">0917-855-5706</a></td></tr>
+            </tbody>
+          </table>
+          <div class="mb-2"><strong>Business Hours:</strong></div>
+          <div>Weekdays: 8:00 AM to 5:00 PM</div>
+          <div>Saturday: 8:00 AM to 5:00 PM</div>
+          <div>Sunday: Closed</div>
+        </div>
+      </div>
+      <!-- Email Addresses -->
+      <div class="transition-all duration-500 bg-white rounded-lg shadow p-6 mb-8">
+        <button class="flex items-center gap-2 text-xl font-bold mb-4 focus:outline-none" onclick="toggleSection('email-section')">
+          <i class="fas fa-envelope text-jonelta-blue"></i> Email Addresses
+          <i class="fas fa-chevron-down ml-2 transition-transform" id="chevron-email"></i>
+        </button>
+        <div id="email-section" class="max-h-96 overflow-hidden transition-all duration-500">
+          <table class="w-full mb-4 text-left">
+            <thead><tr><th>Office</th><th>Email</th></tr></thead>
+            <tbody>
+              <tr><td>Admission</td><td><a href="mailto:admission@isabela.uphsl.edu.ph" class="text-jonelta-blue">admission@isabela.uphsl.edu.ph</a></td></tr>
+              <tr><td>Basic Education</td><td><a href="mailto:basiced@isabela.uphsl.edu.ph" class="text-jonelta-blue">basiced@isabela.uphsl.edu.ph</a></td></tr>
+              <tr><td>Registrar</td><td><a href="mailto:registrar@isabela.uphsl.edu.ph" class="text-jonelta-blue">registrar@isabela.uphsl.edu.ph</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Social Media Links -->
+      <div class="transition-all duration-500 bg-white rounded-lg shadow p-6 mb-8">
+        <button class="flex items-center gap-2 text-xl font-bold mb-4 focus:outline-none" onclick="toggleSection('social-section')">
+          <i class="fab fa-facebook text-jonelta-blue"></i> Social Media & Online Presence
+          <i class="fas fa-chevron-down ml-2 transition-transform" id="chevron-social"></i>
+        </button>
+        <div id="social-section" class="max-h-96 overflow-hidden transition-all duration-500">
+          <ul class="mb-4">
+            <li class="mb-2 flex items-center"><i class="fab fa-facebook mr-2"></i> <a href="https://www.facebook.com/UPHIsabela/?utm_source=chatgpt.com" target="_blank" class="text-jonelta-blue underline">University of Perpetual Help System - Isabela (Facebook)</a></li>
+            <li class="mb-2 flex items-center"><i class="fab fa-instagram mr-2"></i> <a href="https://www.instagram.com/explore/locations/1823984761205536/university-of-perpetual-help-system-laguna-isabela-campus/?hl=en&utm_source=chatgpt.com" target="_blank" class="text-jonelta-blue underline">uphs.isabela (Instagram)</a></li>
+            <li class="mb-2 flex items-center"><i class="fab fa-instagram mr-2"></i> <a href="https://www.instagram.com/uphs.laguna/?utm_source=chatgpt.com" target="_blank" class="text-jonelta-blue underline">@uphs.laguna (Instagram)</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Key Personnel -->
+      <div class="transition-all duration-500 bg-white rounded-lg shadow p-6 mb-8">
+        <button class="flex items-center gap-2 text-xl font-bold mb-4 focus:outline-none" onclick="toggleSection('personnel-section')">
+          <i class="fas fa-users text-jonelta-blue"></i> Key Personnel & Administration
+          <i class="fas fa-chevron-down ml-2 transition-transform" id="chevron-personnel"></i>
+        </button>
+        <div id="personnel-section" class="max-h-96 overflow-hidden transition-all duration-500">
+          <ul class="mb-4">
+            <li><strong>School Director:</strong> Dr. Warren L. Calilung</li>
+            <li><strong>Campus President:</strong> Manuel L. Tamayo</li>
+            <li><strong>Deans:</strong> Mari Christ B. Francisco (CIHM), Edeliza C. Cruz (CAHS), Madeilyn B. Estacio (CAE), Jonathan B. de Veyra (CBA), Roger B. Ariola (CITE)</li>
+            <li><strong>Registrar:</strong> Claricel P. Orata</li>
+            <li><strong>Director, Student Personnel Services:</strong> Jaycy T. Calagui</li>
+            <li><strong>University Librarian:</strong> Meryl Gay A. Gaspar</li>
+            <li><strong>Human Resources Officer:</strong> Edna Y. Labiano</li>
+            <li><strong>Finance Officer:</strong> Maria Theresa M. Andres</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Additional Contact -->
+      <div class="transition-all duration-500 bg-white rounded-lg shadow p-6 mb-8">
+        <button class="flex items-center gap-2 text-xl font-bold mb-4 focus:outline-none" onclick="toggleSection('additional-section')">
+          <i class="fas fa-info-circle text-jonelta-blue"></i> Additional Contact & Info
+          <i class="fas fa-chevron-down ml-2 transition-transform" id="chevron-additional"></i>
+        </button>
+        <div id="additional-section" class="max-h-96 overflow-hidden transition-all duration-500">
+          <ul class="mb-4">
+            <li><strong>ITS Office:</strong> (078) 652-0094</li>
+            <li><strong>GPS Coordinates:</strong> 16.91378, 121.76038</li>
+            <li><strong>General Inquiries Email:</strong> <a href="mailto:info@uphsl.edu.ph" class="text-jonelta-blue">info@uphsl.edu.ph</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="bg-white border-t border-gray-200 text-jonelta-blue py-8 mt-10">
     <div class="max-w-6xl mx-auto text-center">
