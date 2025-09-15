@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <style>
+    .collapse-content {
+      display: none;
+      overflow: hidden;
+      transition: height 0.4s cubic-bezier(.4,0,.2,1);
+    }
+  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admissions | UPHSL-IC</title>
@@ -52,11 +59,197 @@
     </div>
   </header>
   <main class="max-w-4xl mx-auto py-16">
-    <h1 class="text-3xl font-bold neon-text mb-8">Admissions</h1>
-    <section class="mb-8"><h2 class="text-xl font-bold">Requirements</h2><p>Placeholder for requirements.</p></section>
-    <section class="mb-8"><h2 class="text-xl font-bold">Enrollment Procedures</h2><p>Placeholder for procedures.</p></section>
-  <section class="mb-8"><h2 class="text-xl font-bold">Why UPHSL-IC?</h2><p>Placeholder for why UPHSL-IC.</p></section>
-    <section class="mb-8"><h2 class="text-xl font-bold">Scholarships & Financial Aid</h2><p>Placeholder (optional).</p></section>
+    <h1 class="text-3xl font-bold neon-text mb-8"><i class="fas fa-user-graduate mr-2"></i>Admissions</h1>
+    <section class="mb-8">
+      <button class="w-full text-left font-bold text-xl py-3 px-4 bg-gray-100 rounded flex items-center justify-between mb-2" onclick="toggleCollapse('reqCollapse')">
+        <span><i class="fas fa-file-alt mr-2"></i>Requirements</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div id="reqCollapse" class="collapse-content">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-jonelta-blue"><i class="fas fa-user-plus mr-2"></i>New Student (College/SHS)</h3>
+            <ul class="list-disc ml-6 text-gray-700">
+              <li><i class="fas fa-id-card mr-1"></i>Original High School Card (Form 138)</li>
+              <li><i class="fas fa-certificate mr-1"></i>Certificate of Good Moral Character</li>
+              <li><i class="fas fa-baby mr-1"></i>Birth Certificate</li>
+              <li><i class="fas fa-image mr-1"></i>3 pcs. 2x2 Pictures</li>
+              <li><i class="fas fa-envelope mr-1"></i>3 pcs. Mailing Stamps</li>
+              <li><i class="fas fa-notes-medical mr-1"></i>Medical Certificate (for MARITIME)</li>
+              <li><i class="fas fa-eye mr-1"></i>Ishihara and Audiometry (for MARITIME)</li>
+              <li><i class="fas fa-ring mr-1"></i>Marriage Contract (if applicable)</li>
+              <li><i class="fas fa-certificate mr-1"></i>ESC/QVR Certification (SHS)</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-jonelta-blue"><i class="fas fa-exchange-alt mr-2"></i>Transferee (College/SHS)</h3>
+            <ul class="list-disc ml-6 text-gray-700">
+              <li><i class="fas fa-file-alt mr-1"></i>Copy of Grades for Evaluation</li>
+              <li><i class="fas fa-file-import mr-1"></i>Transfer Credentials (copy for UPHSL)</li>
+              <li><i class="fas fa-certificate mr-1"></i>Certificate of Good Moral Character</li>
+              <li><i class="fas fa-baby mr-1"></i>Birth Certificate</li>
+              <li><i class="fas fa-image mr-1"></i>3 pcs. 2x2 Pictures</li>
+              <li><i class="fas fa-envelope mr-1"></i>3 pcs. Mailing Stamps</li>
+              <li><i class="fas fa-notes-medical mr-1"></i>Medical Certificate (for MARITIME)</li>
+              <li><i class="fas fa-eye mr-1"></i>Ishihara and Audiometry (for MARITIME)</li>
+              <li><i class="fas fa-ring mr-1"></i>Marriage Contract (if applicable)</li>
+              <li><i class="fas fa-certificate mr-1"></i>ESC/QVR Certification (SHS)</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-jonelta-blue"><i class="fas fa-graduation-cap mr-2"></i>Graduate School, Law, & EMAP</h3>
+            <ul class="list-disc ml-6 text-gray-700">
+              <li><i class="fas fa-file-alt mr-1"></i>Transcript of Records (Copy for UPHSL)</li>
+              <li><i class="fas fa-certificate mr-1"></i>Certificate of Good Moral Character</li>
+              <li><i class="fas fa-file-import mr-1"></i>Transfer Credentials</li>
+              <li><i class="fas fa-baby mr-1"></i>Birth Certificate</li>
+              <li><i class="fas fa-ring mr-1"></i>Marriage Contract (if applicable)</li>
+              <li><i class="fas fa-image mr-1"></i>3 pcs. 2x2 Pictures</li>
+              <li><i class="fas fa-envelope mr-1"></i>3 pcs. Mailing Stamps</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-jonelta-blue"><i class="fas fa-undo mr-2"></i>Returning Student</h3>
+            <ul class="list-disc ml-6 text-gray-700">
+              <li><i class="fas fa-file-signature mr-1"></i>Clearance Form duly signed by the Dean (Semestral Clearance Form)</li>
+              <li><i class="fas fa-user-check mr-1"></i>Evaluation by the Dean</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-jonelta-blue"><i class="fas fa-user-friends mr-2"></i>Cross Enrollee</h3>
+            <ul class="list-disc ml-6 text-gray-700">
+              <li><i class="fas fa-file-signature mr-1"></i>Permit to Cross Enroll</li>
+              <li><i class="fas fa-baby mr-1"></i>Birth Certificate</li>
+              <li><i class="fas fa-image mr-1"></i>3 pcs. 2x2 Pictures</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-jonelta-blue"><i class="fas fa-globe mr-2"></i>Foreign Student</h3>
+            <ul class="list-disc ml-6 text-gray-700">
+              <li><i class="fas fa-file-alt mr-1"></i>Authenticated Scholastic Record</li>
+              <li><i class="fas fa-baby mr-1"></i>Authenticated Birth Certificate</li>
+              <li><i class="fas fa-university mr-1"></i>Affidavit of Support / Bank Statement</li>
+              <li><i class="fas fa-user-shield mr-1"></i>Police Clearance</li>
+              <li><i class="fas fa-image mr-1"></i>3 pcs. 2x2 Pictures</li>
+              <li><i class="fas fa-passport mr-1"></i>Original Passport</li>
+              <li><i class="fas fa-id-card mr-1"></i>Original ACR I-Card (Alien Certificate of Registration)</li>
+              <li><i class="fas fa-visa mr-1"></i>Valid Student Visa</li>
+            </ul>
+          </div>
+          <div class="md:col-span-2 mb-4 text-gray-700">
+            <strong><i class="fas fa-info-circle mr-1"></i>Note:</strong>
+            <ul class="list-disc ml-6">
+              <li>Requirements must be in triplicate with one original copy (except Birth/Marriage Certificate).</li>
+              <li>Filipino students who studied overseas must bring authenticated documents.</li>
+              <li>Foreign students from Philippine schools need not authenticate documents.</li>
+              <li>Entrance Exam Result must be presented.</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    <section class="mb-8">
+      <button class="w-full text-left font-bold text-xl py-3 px-4 bg-gray-100 rounded flex items-center justify-between mb-2" onclick="toggleCollapse('procCollapse')">
+        <span><i class="fas fa-tasks mr-2"></i>Enrollment Procedures</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div id="procCollapse" class="collapse-content" style="display:none;">
+        <ol class="list-decimal ml-6 text-gray-700 space-y-2">
+          <li><strong><i class="fas fa-info-circle mr-1"></i>Information/Admission Area</strong><br>Obtain admission requirement slip.<br><span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i>AVR (E-Room), 1st Floor.</span></li>
+          <li><strong><i class="fas fa-edit mr-1"></i>Examination Area</strong><br>Take the aptitude exam.<br><span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i>Room 102 (Senior High), Computer Lab 2nd Floor (College).</span></li>
+          <li><strong><i class="fas fa-user-check mr-1"></i>Admission (All Levels)</strong><br>Student number, pre-enrollment form, and personal info encoding. Submit admission requirements.<br><span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i>AVR/E-Room, 1st Floor.</span></li>
+          <li><strong><i class="fas fa-chalkboard-teacher mr-1"></i>Assessment & Advising</strong><br>Room assignment and tuition/supplies assessment.<br><span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i>Room 103 (College), Room 101 (Basic Education).</span></li>
+          <li><strong><i class="fas fa-cash-register mr-1"></i>Cashier’s Office</strong><br>Present assessments and pay down payment.<br><span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i>1st Floor.</span></li>
+          <li><strong><i class="fas fa-file-signature mr-1"></i>Enrollment / Registration Form Issuance</strong><br>Submit original requirements, pre-enrollment form, and OR.<br><span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i>Room 101 (Basic Education), Room 103 (College).</span></li>
+          <li><strong><i class="fas fa-id-badge mr-1"></i>ID Application</strong><br>Present registration form to ITS Office.<br><span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i>Room 104-A, 1st Floor.</span></li>
+        </ol>
+      </div>
+    </section>
+    <section class="mb-8">
+      <button class="w-full text-left font-bold text-xl py-3 px-4 bg-gray-100 rounded flex items-center justify-between mb-2" onclick="toggleCollapse('whyCollapse')">
+        <span><i class="fas fa-university mr-2"></i>Why UPHSL-IC?</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div id="whyCollapse" class="collapse-content" style="display:none;">
+        <ul class="list-disc ml-6 text-gray-700">
+          <li><i class="fas fa-award mr-1"></i>Recognized institution under the <strong>University of Perpetual Help System Laguna</strong>.</li>
+          <li><i class="fas fa-school mr-1"></i>Offers <strong>Basic Education to Graduate Studies</strong>.</li>
+          <li><i class="fas fa-ship mr-1"></i>Maritime, Law, EMAP, and professional programs.</li>
+          <li><i class="fas fa-lightbulb mr-1"></i>Emphasis on <strong>values, competence, and industry relevance</strong>.</li>
+          <li><i class="fas fa-laptop mr-1"></i>Equipped with modern facilities: AVR, Computer Labs, Maritime Training Areas.</li>
+          <li><i class="fas fa-hand-holding-usd mr-1"></i>Provides <strong>scholarship opportunities</strong> and financial assistance.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="mb-8">
+      <button class="w-full text-left font-bold text-xl py-3 px-4 bg-gray-100 rounded flex items-center justify-between mb-2" onclick="toggleCollapse('scholarCollapse')">
+        <span><i class="fas fa-hand-holding-usd mr-2"></i>Scholarships & Financial Aid</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div id="scholarCollapse" class="collapse-content" style="display:none;">
+        <ul class="list-disc ml-6 text-gray-700">
+          <li><i class="fas fa-star mr-1"></i><strong>Academic Scholarships</strong> – for students with outstanding academic performance.</li>
+          <li><i class="fas fa-running mr-1"></i><strong>Athletic Grants</strong> – for student-athletes representing the institution.</li>
+          <li><i class="fas fa-landmark mr-1"></i><strong>Government Subsidies</strong> – ESC, QVR, CHED, and other grants.</li>
+          <li><i class="fas fa-money-bill-wave mr-1"></i><strong>Financial Aid Programs</strong> – installment tuition payment, special discounts.</li>
+          <li><i class="fas fa-envelope mr-1"></i>Contact the <strong>Admission Office</strong> for details: <a href="mailto:admission.college@uphsl.edu.ph" class="text-jonelta-blue underline">admission.college@uphsl.edu.ph</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="mb-8">
+      <button class="w-full text-left font-bold text-xl py-3 px-4 bg-gray-100 rounded flex items-center justify-between mb-2" onclick="toggleCollapse('contactCollapse')">
+        <span><i class="fas fa-address-book mr-2"></i>Contact Information</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div id="contactCollapse" class="collapse-content" style="display:none;">
+        <div class="mb-2">
+          <span class="font-semibold"><i class="fas fa-envelope mr-1"></i>Emails</span>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li><i class="fas fa-building mr-1"></i>Corporate: <a href="mailto:info@uphsl.edu.ph" class="text-jonelta-blue underline">info@uphsl.edu.ph</a></li>
+            <li><i class="fas fa-user-graduate mr-1"></i>Admission: <a href="mailto:admission.college@uphsl.edu.ph" class="text-jonelta-blue underline">admission.college@uphsl.edu.ph</a></li>
+            <li><i class="fas fa-book mr-1"></i>Basic Education: <a href="mailto:basiced@uphsl.edu.ph" class="text-jonelta-blue underline">basiced@uphsl.edu.ph</a></li>
+            <li><i class="fas fa-user-tie mr-1"></i>Senior High School: <a href="mailto:shsdirector@uphsl.edu.ph" class="text-jonelta-blue underline">shsdirector@uphsl.edu.ph</a> | <a href="mailto:shs@uphsl.edu.ph" class="text-jonelta-blue underline">shs@uphsl.edu.ph</a></li>
+            <li><i class="fas fa-clipboard-list mr-1"></i>College Registrar: <a href="mailto:registrar@uphsl.edu.ph" class="text-jonelta-blue underline">registrar@uphsl.edu.ph</a></li>
+          </ul>
+        </div>
+        <div class="mb-2">
+          <span class="font-semibold"><i class="fas fa-clock mr-1"></i>Business Hours</span>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li><i class="fas fa-calendar-day mr-1"></i>Weekdays: 8 AM – 5 PM</li>
+            <li><i class="fas fa-calendar mr-1"></i>Saturday: 8 AM – 5 PM</li>
+            <li><i class="fas fa-calendar-times mr-1"></i>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script>
+      function toggleCollapse(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        if (!el.classList.contains('collapsing') && (el.style.display === "none" || el.style.display === "")) {
+          el.style.display = "block";
+          el.style.height = "0px";
+          el.classList.add('collapsing');
+          setTimeout(function() {
+            el.style.height = el.scrollHeight + "px";
+          }, 10);
+          setTimeout(function() {
+            el.style.height = "";
+            el.classList.remove('collapsing');
+          }, 410);
+        } else if (!el.classList.contains('collapsing')) {
+          el.classList.add('collapsing');
+          el.style.height = el.scrollHeight + "px";
+          setTimeout(function() {
+            el.style.height = "0px";
+          }, 10);
+          setTimeout(function() {
+            el.style.display = "none";
+            el.style.height = "";
+            el.classList.remove('collapsing');
+          }, 410);
+        }
+      }
+    </script>
   </main>
   <footer class="bg-white border-t border-gray-200 text-jonelta-blue py-8 mt-10">
     <div class="max-w-6xl mx-auto text-center">
