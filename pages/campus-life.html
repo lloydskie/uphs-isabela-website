@@ -1,6 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <style>
+    @media (min-width: 768px) {
+      .section-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .section-flex .flex-shrink-0 {
+        order: 1;
+      }
+      .section-flex > div:not(.flex-shrink-0) {
+        order: 2;
+      }
+    }
+  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Campus Life | UPHSL-IC</title>
@@ -51,12 +67,20 @@
       </nav>
     </div>
   </header>
-  <main class="max-w-4xl mx-auto py-16">
-    <div class="w-full h-[60vh] md:h-[80vh] mb-8 overflow-hidden">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/V1hLKMAiGvs?autoplay=1&mute=0&controls=0&showinfo=0&rel=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <main class="max-w-4xl mx-auto py-16 mt-28" style="padding-top: 0px;">
+    <!-- Hero Image -->
+  <div class="w-full mb-8" style="margin-top:0;">
+  <img src="/assets/campus-life/campus-life.webp" alt="Campus Life Hero" style="width:100vw;max-width:100vw;height:200px;object-fit:cover;object-position:center;display:block;margin-left:calc(-50vw + 50%);" class="rounded-lg shadow-lg" />
     </div>
+  <style>
+    @media (max-width: 425px) {
+      main.max-w-4xl {
+        margin-top: 90px !important;
+      }
+    }
+  </style>
     <!-- Supreme Student Council Section -->
-    <section class="mb-12 flex flex-col md:flex-row items-center gap-8">
+  <section class="mt-24 mb-8 section-flex p-4 bg-white rounded-lg shadow">
       <div class="flex-shrink-0">
         <img src="/assets/campus-life/ssc.jpg" alt="Supreme Student Council" class="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-jonelta-blue">
       </div>
@@ -67,7 +91,7 @@
       </div>
     </section>
     <!-- Community Outreach Office Section -->
-    <section class="mb-12 flex flex-col md:flex-row items-center gap-8">
+  <section class="mb-8 section-flex p-4 bg-white rounded-lg shadow">
       <div class="flex-shrink-0">
         <img src="/assets/campus-life/coc.jpg" alt="Community Outreach Office" class="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-jonelta-blue">
       </div>
@@ -79,7 +103,7 @@
     </section>
 
     <!-- Campus Ministry Section -->
-    <section class="mb-12 flex flex-col md:flex-row items-center gap-8">
+  <section class="mb-8 section-flex p-4 bg-white rounded-lg shadow">
       <div class="flex-shrink-0">
         <img src="/assets/campus-life/ora.jpg" alt="Campus Ministry" class="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-jonelta-blue">
       </div>
@@ -91,7 +115,7 @@
     </section>
 
       <!-- Student Personnel Services Section -->
-      <section class="mb-12 flex flex-col md:flex-row items-center gap-8">
+  <section class="mb-8 section-flex p-4 bg-white rounded-lg shadow">
         <div class="flex-shrink-0">
           <img src="/assets/campus-life/sps.jpg" alt="Student Personnel Services" class="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-jonelta-blue">
         </div>
@@ -103,7 +127,7 @@
       </section>
 
     <!-- Perpetual Gazette Section -->
-    <section class="mb-12 flex flex-col md:flex-row items-center gap-8">
+  <section class="mb-8 section-flex p-4 bg-white rounded-lg shadow">
       <div class="flex-shrink-0">
         <img src="/assets/campus-life/gazette.jpg" alt="Perpetual Gazette" class="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-jonelta-blue">
       </div>
